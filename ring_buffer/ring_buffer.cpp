@@ -30,7 +30,7 @@ void RingBuffer<T>::push(T item)
 	_write_index = clamp_index(_write_index + 1);
 	
 	if (_count != _capacity) {
-		count += 1;
+		_count += 1;
 	}
 }
 
@@ -81,6 +81,4 @@ int main(int argc, char** argv) {
 			std::cout << "value: " << value << std::endl;
 		}
 	}
-
-	system("pause");
 }
